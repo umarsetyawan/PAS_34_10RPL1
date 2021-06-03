@@ -9,36 +9,37 @@
     app:cardUseCompatPadding="true">
 
     <RelativeLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp">
 
         <ImageView
-            android:id="@+id/Image"
+            android:id="@+id/Imagetv"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:src="@mipmap/ic_launcher"/>
 
         <TextView
-            android:id="@+id/Title"
-            android:layout_width="wrap_content"
+            android:id="@+id/txt_Title"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TITLE"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:layout_toRightOf="@+id/Image"
-            android:layout_toEndOf="@+id/Image"
+            android:layout_toRightOf="@+id/Imagetv"
+            android:layout_toEndOf="@+id/Imagetv"
             android:layout_marginLeft="15dp"/>
 
         <TextView
-            android:id="@+id/Description"
-            android:layout_width="wrap_content"
+            android:id="@+id/txt_Description"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Deskripsi"
             android:textSize="18sp"
-            android:layout_toRightOf="@+id/Image"
-            android:layout_below="@+id/Title"
-            android:layout_toEndOf="@+id/Image"
+            android:layout_toRightOf="@+id/Imagetv"
+            android:layout_below="@+id/txt_Title"
+            android:layout_toEndOf="@+id/Imagetv"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"/>
     </RelativeLayout>

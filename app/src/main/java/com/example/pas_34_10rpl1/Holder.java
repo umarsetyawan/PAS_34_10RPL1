@@ -9,15 +9,15 @@ import android.widget.TextView;
 
 public class Holder extends RecyclerView.ViewHolder {
 
-    ImageView imageView;
+    ImageView mimageView;
     TextView mTitle, mDesc;
 
     public Holder(@NonNull View itemView) {
         super(itemView);
 
-        this.imageView.findViewById(R.id.Image);
-        this.mTitle.findViewById(R.id.Title);
-        this.mDesc.findViewById(R.id.Description);
+        this.mimageView = itemView.findViewById(R.id.Imagetv);
+        this.mTitle = itemView.findViewById(R.id.txt_Title);
+        this.mDesc = itemView.findViewById(R.id.txt_Description);
 
     }
 }

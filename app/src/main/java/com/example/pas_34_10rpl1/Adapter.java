@@ -24,9 +24,9 @@ public class Adapter extends RecyclerView.Adapter<Holder> {
     @NonNull
     @Override
     public Holder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
-
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row, null);
         return new Holder(view);
+
     }
 
     @Override
@@ -34,7 +34,7 @@ public class Adapter extends RecyclerView.Adapter<Holder> {
 
         holder.mTitle.setText(models.get(i).getTitle());
         holder.mDesc.setText(models.get(i).getDesc());
-        holder.imageView.setImageResource(models.get(i).getImg());
+        holder.mimageView.setImageResource(models.get(i).getImg());
 
     }
 
