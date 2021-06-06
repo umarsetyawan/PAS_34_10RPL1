@@ -37,7 +37,7 @@ public class Adapter extends RecyclerView.Adapter<Holder> {
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int i) {
 
-        holder.mTitle.setText(models.get(i).getTitle());
+        holder.mTitle.setText(models.get(i).getName());
         holder.mDesc.setText(models.get(i).getDesc());
         holder.mImageView.setImageResource(models.get(i).getImg());
 
@@ -45,7 +45,7 @@ public class Adapter extends RecyclerView.Adapter<Holder> {
             @Override
             public void onItemListener(View v, int Position) {
 
-                String gTitle = models.get(Position).getTitle();
+                String gTitle = models.get(Position).getName();
                 String gDesc = models.get(Position).getDesc();
                 BitmapDrawable bitmapDrawable = (BitmapDrawable) holder.mImageView.getDrawable();
 

@@ -2,15 +2,16 @@ package com.example.pas_34_10rpl1;
 
 public class Model {
 
-    private String Title, Desc;
+    private String Name, Desc;
     private int img;
 
-    public String getTitle() {
-        return Title;
+
+    public String getName() {
+        return Name;
     }
 
-    public void setTitle(String title) {
-        Title = title;
+    public void setName(String name) {
+        Name = name;
     }
 
     public String getDesc() {

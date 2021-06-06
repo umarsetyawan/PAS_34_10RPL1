@@ -17,7 +17,7 @@ public class Holder extends RecyclerView.ViewHolder implements View.OnClickListe
         super(itemView);
 
         this.mImageView = itemView.findViewById(R.id.Imagetv);
-        this.mTitle = itemView.findViewById(R.id.txt_Title);
+        this.mTitle = itemView.findViewById(R.id.txt_Name);
         this.mDesc = itemView.findViewById(R.id.txt_Description);
 
         itemView.setOnClickListener(this);

@@ -31,19 +31,19 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Model> models = new ArrayList<>();
 
         Model m = new Model();
-        m.setTitle("Profile");
+        m.setName("Profile");
         m.setDesc("This is profile description..");
         m.setImg(R.drawable.user);
         models.add(m);
 
         m = new Model();
-        m.setTitle("cart");
+        m.setName("cart");
         m.setDesc("This is cart description..");
         m.setImg(R.drawable.cart);
         models.add(m);
 
         m = new Model();
-        m.setTitle("setting");
+        m.setName("setting");
         m.setDesc("This is setting description..");
         m.setImg(R.drawable.settings);
         models.add(m);
