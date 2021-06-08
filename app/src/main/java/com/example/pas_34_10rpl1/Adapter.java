@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -64,6 +65,18 @@ public class Adapter extends RecyclerView.Adapter<Holder> {
                 c.startActivity(intent);
 
             }
+
+            @Override
+            public boolean onItemHolde(MenuItem item, int Position) {
+                switch (item.getItemId()){
+                    case R.id.delete :
+                        models.remove(Position);
+                        notifyDataSetChanged();
+                        break;
+                }
+                return false;
+            }
+
         });
 
     }
