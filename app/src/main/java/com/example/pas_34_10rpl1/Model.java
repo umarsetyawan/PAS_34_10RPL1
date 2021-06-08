@@ -5,6 +5,11 @@ public class Model {
     private String Name, Desc;
     private int img;
 
+    public Model(String name, String desc, int img) {
+        Name = name;
+        Desc = desc;
+        this.img = img;
+    }
 
     public String getName() {
         return Name;

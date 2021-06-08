@@ -4,14 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView mrecyclerView;
     Adapter adapter;
+    public static final ArrayList<Model> models = new ArrayList<>();
 
 
     @Override
@@ -19,35 +24,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ImageButton plusbtn = findViewById(R.id.plusbtn);
+        plusbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, NewDataActivity.class);
+                startActivity(intent);
+            }
+        });
+
         mrecyclerView = findViewById(R.id.rvdata);
         mrecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter = new Adapter(this, getList());
+        adapter = new Adapter(this, models);
         mrecyclerView.setAdapter(adapter);
 
-    }
+        adapter.notifyDataSetChanged();
 
-    private ArrayList<Model> getList() {
-        ArrayList<Model> models = new ArrayList<>();
-
-        Model m = new Model();
-        m.setName("Profile");
-        m.setDesc("This is profile description..");
-        m.setImg(R.drawable.user);
-        models.add(m);
-
-        m = new Model();
-        m.setName("cart");
-        m.setDesc("This is cart description..");
-        m.setImg(R.drawable.cart);
-        models.add(m);
-
-        m = new Model();
-        m.setName("setting");
-        m.setDesc("This is setting description..");
-        m.setImg(R.drawable.settings);
-        models.add(m);
-
-        return models;
     }
 }

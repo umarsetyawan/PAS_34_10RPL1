@@ -7,6 +7,8 @@ import android.graphics.drawable.BitmapDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,7 +21,7 @@ import java.util.Objects;
 public class Adapter extends RecyclerView.Adapter<Holder> {
 
     Context c;
-    ArrayList<Model> models;
+    ArrayList<Model> models = new ArrayList<>();
 
     public Adapter(Context c, ArrayList<Model> models) {
         this.c = c;
@@ -37,8 +39,8 @@ public class Adapter extends RecyclerView.Adapter<Holder> {
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int i) {
 
-        holder.mTitle.setText(models.get(i).getName());
-        holder.mDesc.setText(models.get(i).getDesc());
+        holder.mTitle.setText(MainActivity.models.get(i).getName());
+        holder.mDesc.setText(MainActivity.models.get(i).getDesc());
         holder.mImageView.setImageResource(models.get(i).getImg());
 
         holder.setItemClickListener(new ItemClickListener() {
@@ -65,6 +67,8 @@ public class Adapter extends RecyclerView.Adapter<Holder> {
         });
 
     }
+
+
 
     @Override
     public int getItemCount() {
